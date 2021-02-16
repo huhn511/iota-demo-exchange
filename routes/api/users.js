@@ -13,6 +13,7 @@ const router      = require('express').Router();
 const auth        = require('../auth');
 const generateJWT = require('../../utils/generateJWT');
 const User        = require('../../models').User;
+const Wallet        = require('../../iota/wallet');
 
 const userSchema = Joi.object().keys({
 	username: Joi.string().alphanum().min(3).max(30).optional(),
@@ -64,6 +65,10 @@ router.post('/signup', auth.optional, async (req, res /*, next*/) => {
     }
     try{
         const user = await User.create(req.body);
+
+		// Create IOTA Deposit Account
+		Wallet.create_account(user.id)
+
         return res.json({ user });
     }catch(e){
         return res.status(500).json({

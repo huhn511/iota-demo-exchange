@@ -12,6 +12,7 @@ const bodyParser = require('body-parser');
 const session    = require('express-session');
 const cors       = require('cors');
 const models     = require('./models');
+const iota_wallet     = require('./iota/wallet');
 
 /* Make all variables from our .env file available in our process */
 require('dotenv').config();
@@ -33,8 +34,10 @@ app.use(require('./routes'));
 const port = process.env.PORT || 3000;
 const address = process.env.SERVER_ADDRESS || '127.0.0.1';
 
+
 /* Create everything automatically with sequelize ORM */
 models.sequelize.sync().then(function () {
+	iota_wallet.init()
 	app.listen( port, address, () => console.log(`Server running on http://${address}:${port}`));
 });
 
