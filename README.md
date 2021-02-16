@@ -1,13 +1,8 @@
 
-# [Nodejs Starter](https://appseed.us/boilerplate-code/nodejs-starter)
+# IOTA DEMO Exchange in Node,js
 
-Express / [Nodejs Starter](https://appseed.us/boilerplate-code/nodejs-starter) with [JWT authentication](https://jwt.io/introduction/), [SQLite](https://www.sqlite.org/index.html) database, [Sequelize](http://docs.sequelizejs.com/) ORM, unit tests and basic tooling - Provided by **AppSeed** [Web App Generator](https://appseed.us/app-generator).
 
-<br />
-
-![Open-Source Nodejs Starter - Product cover image.](https://github.com/app-generator/static/blob/master/products/boilerplate-code-nodejs-starter-cover.jpg?raw=true) 
-
-<br />
+This is an experimental codebasis to learn development with the new Chrysalis (IOTA 1.5) Network.
 
 ## Requirements
 - [Node.js](https://nodejs.org/) >= 6.x
@@ -50,8 +45,8 @@ Content-Type: application/json
 <br />
 
 ## Setting up for development
-* clone repo: `git clone https://github.com/app-generator/nodejs-starter.git` 
-* change directory to nodejs-starter: 
+* clone repo: `git clone https://github.com/huhn511/iota-demo-exchange.git` 
+* change directory to iota-demo-exchange: 
 * create a file named .env which should contain the following default setup:
 ```
 SALT=35kj7waj3k5kja09jeoi21kn0pg13iuhlkn // used in password hashing
@@ -59,6 +54,7 @@ JWT_SECRET=secret        // used in JWT signing
 SESSION_SECRET=secret    // used for session data
 PORT=3000                // the port on which your server will be available on
 SERVER_ADDRESS=127.0.0.1 // or 0.0.0.0 for all or other interface address you want to listen
+SH_PASSWORD="very secret passport"
 ```
 * users are saved in file `config/users.js`
 
@@ -82,16 +78,12 @@ Runs the application with [nodemon]("https://nodemon.io/"). Server is listening 
 
 <br />
 
-## Support
-
-For issues and features request, use **Github** or access the [support page](https://appseed.us/support) provided by **AppSeed** 
-
 <br />
 
 ## License
-MIT @ [AppSeed](https://appseed.us)
 
 <br />
-
----
+Based on
+MIT @ [AppSeed](https://appseed.us)
 [Nodejs Starter](https://appseed.us/boilerplate-code/nodejs-starter) provided by **AppSeed**
+---
